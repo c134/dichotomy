@@ -1,0 +1,1 @@
+var dichotomy = angular.module('dichotomy', ['ui.router', 'ngResource']);

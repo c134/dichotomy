@@ -1,0 +1,43 @@
+<table class="table">
+    <tr>
+        <th>
+            workplace
+        </th>
+        <th>
+            skill
+        </th>
+        <th>
+            rating
+        </th>
+        <th>
+            dichotomy
+        </th>
+    </tr>
+    <tbody>
+    <tr data-ng-repeat="skill in workplacesWithSkills">
+        <td>
+            {{ workplace.fields.position_name }}
+        </td>
+        <td>
+            {{ skill.fields.skill_name }}
+        </td>
+        <td>
+            {{ skill.fields.rating }}
+        </td>
+        <td>
+            <select data-ng-model="skill.poll">
+                <option value=""></option>
+                <option value="1">generalizing</option>
+                <option value="2">detailing</option>
+                <option value="3">participant</option>
+                <option value="4">observer</option>
+                <option value="5">object_oriented</option>
+                <option value="6">connection_oriented</option>
+                <option value="7">identifying</option>
+                <option value="8">resultant</option>
+            </select>
+        </td>
+    </tr>
+    </tbody>
+</table>
+<button class="btn btn-primary" type="submit" data-ng-click="calculateDichotomy()">Calculate</button>

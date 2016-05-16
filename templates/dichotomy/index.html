@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en" data-ng-app="dichotomy">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    {% load staticfiles %}
+    <link rel="stylesheet" type="text/css"
+          href="{% static 'dichotomy/components/bootstrap/dist/css/bootstrap.min.css' %}">
+</head>
+<body>
+<nav class="navbar navbar-inverse">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <a class="navbar-brand" href="#">Dichotomy</a>
+        </div>
+        <ul class="nav navbar-nav">
+            <li><a ui-sref="create_workplace">Create Workplace</a></li>
+            <li><a ui-sref="workplace_overview">Workplace Overview</a></li>
+        </ul>
+    </div>
+</nav>
+
+<div class="row">
+    <div class="col-md-12" ui-view>
+        <!-- Content here -->
+    </div>
+</div>
+
+<script src="{% static 'dichotomy/components/jquery/dist/jquery.min.js' %}"></script>
+<script src="{% static 'dichotomy/components/bootstrap/dist/js/bootstrap.min.js' %}"></script>
+<script src="{% static 'dichotomy/components/angular/angular.min.js' %}"></script>
+<script src="{% static 'dichotomy/components/angular-resource/angular-resource.min.js' %}"></script>
+<script src="{% static 'dichotomy/components/angular-ui-router/release/angular-ui-router.min.js' %}"></script>
+<script src="{% static 'dichotomy/angular-app/app.js' %}"></script>
+<script src="{% static 'dichotomy/angular-app/csrf_config.js' %}"></script>
+<script src="{% static 'dichotomy/angular-app/controllers.js' %}"></script>
+<script src="{% static 'dichotomy/angular-app/resources.js' %}"></script>
+<script src="{% static 'dichotomy/angular-app/router.js' %}"></script>
+</body>
+</html>

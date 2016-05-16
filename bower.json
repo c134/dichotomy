@@ -1,0 +1,25 @@
+{
+  "name": "bechPr",
+  "authors": [
+    "c134 <crt782@gmail.com>"
+  ],
+  "description": "",
+  "main": "",
+  "moduleType": [],
+  "license": "MIT",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "~3.3.6",
+    "angular": "angularjs#~1.5.5",
+    "angular-route": "~1.5.5",
+    "angular-ui-router": "~0.2.18",
+    "angular-resource": "~1.5.5"
+  }
+}

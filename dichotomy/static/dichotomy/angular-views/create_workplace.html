@@ -1,0 +1,18 @@
+<h1>Work Place</h1>
+<label id="workplace_name" for="workplace_name">Name</label>
+<input id="workplace_name" name="workplace_name" data-ng-model="workplace.name">
+<div data-ng-repeat="skill in workplace.skills">
+    <label for="skill.number">Skill</label>
+    <input id="skill.number" data-ng-model="skill.name" name="skill.number">
+    <select data-ng-model="skill.rating">
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+
+    </select>
+    <button class="btn btn-danger" ng-click="removeSkill()">Remove</button>
+</div>
+<button class="btn btn-success" ng-click="addSkill()">Add fields</button>
+<button class="btn btn-primary" type="submit" data-ng-click="createWorkplace()">Create</button>
