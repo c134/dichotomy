@@ -20,7 +20,7 @@ class IndexView(generic.ListView):
         return ''
 
 
-def get_workplaces(request, get_all):
+def get_workplaces(id, get_all):
     return HttpResponse(serializers.serialize('json', WorkPosition.objects.all()))
 
 
@@ -42,6 +42,10 @@ def create_workplace(request):
             RequiredSkills(working_position_id=work_position, skill_name=skill['name'], rating=skill['rating']))
     RequiredSkills.objects.bulk_create(required_skills)
     return JsonResponse({'id': work_position.id, 'name': work_position.position_name})
+
+
+def get_dichotomies(request, get_all):
+    pass
 
 
 def calculate_dichotomy(request):
@@ -121,5 +125,6 @@ def calculate_dichotomy(request):
                                            connection_oriented=connection_oriented_avg, identifying=indetifying_avg,
                                            resultant=resultant_avg,
                                            working_position_id_id=request.POST.get('workplace_id'),
-                                           result_dichotomy_id_id=result_dichotomy)
+                                           result_dichotomy_id_id=result_dichotomy.id)
     calculation_result.save()
+    return JsonResponse({'id': result_dichotomy.id, 'name': result_dichotomy.position_name})
